@@ -1,0 +1,25 @@
+{
+  "name": "rendr-amdefine",
+  "version": "0.0.1",
+  "description": "Rendr flavored AMDefine to allow relative path requires for app modules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexindigo/node-rendr-amdefine.git"
+  },
+  "keywords": [
+    "amdefine",
+    "require",
+    "define",
+    "rendr",
+    "amd"
+  ],
+  "author": "Alex Indigo <iam@alexindigo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "amdefine": "~0.1.0"
+  }
+}
