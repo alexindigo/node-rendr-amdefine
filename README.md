@@ -8,15 +8,41 @@ Allows to use relative to project's root paths to match require paths on the cli
 
 ```javascript
 
-// works both in node and on the client
-var deps = [
-  'app/models/property',
-  'app/collections/property_search'
-];
+if (typeof define !== 'function') {
+  var define = require('rendr-amdefine')(module);
+}
 
-require(deps, function()
+define(function(require)
 {
-  // ...
+  // works both in node and on the client
+  var deps = [
+    'app/models/property',
+    'app/collections/property_search'
+  ];
+
+  require(deps, function()
+  {
+    // ...
+  });
+
 });
+
+```
+
+To use within test frameworks (like jasmin) add following line to your test suite:
+
+```javascript
+
+require('rendr-amdefine').withAutoBasePath();
+
+```
+
+It will set `basePath` as parent folder of the node_modules directory that contains `rendr-amdefine`.
+
+For the case where it's not applicable you can directly manipulate `basePath` by using:
+
+```javascript
+
+require('rendr-amdefine').basePath('/custom/path');
 
 ```

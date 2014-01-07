@@ -1,6 +1,6 @@
 {
   "name": "rendr-amdefine",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rendr flavored AMDefine to allow relative path requires for app modules.",
   "main": "index.js",
   "scripts": {
